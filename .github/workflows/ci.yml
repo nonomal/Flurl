@@ -38,4 +38,4 @@ jobs:
         run: dotnet restore
 
       - name: Test
-        run: dotnet test --framework ${{ matrix.framework }} -c Release /p:CollectCoverage=true /p:Threshold=80 /p:Include="[Flurl]*,[Flurl.Http]*,[Flurl.Http.Newtonsoft]*" /p:Exclude="[*]*.GeneratedExtensions"
+        run: dotnet test --framework ${{ matrix.framework }} -c Release /p:CollectCoverage=true /p:Threshold=80 /p:Include="[Flurl]*%2c[Flurl.Http]*%2c[Flurl.Http.Newtonsoft]*" /p:Exclude="[*]*.GeneratedExtensions"
